@@ -1,0 +1,19 @@
+Ebuild for the wine sources provided by Codeweaver's for Crossover Games
+url: http://www.codeweavers.com/products/source/
+
+Contact Me: travisat@gmail.com
+
+To download:
+
+git clone http://github.com/travisat/wine-9.2.0-ebuild.git
+
+
+Why use this over vanilla wine from portage.  This one works great with source based games including cs:s.  It contains most of the patches from Codeweaver and is not updated every week.  I find it usually works with many games.
+
+This is not completed the following issues that I know of are as follows:
+1) Programs included with wine are not installed correctly.  These include winecfg, regedit, etc.
+    These can be found in /usr/lib##/wine/fakedlls
+    If anybody knows how to fix this please let me know
+2) In order to get a usable /usr/bin/wine I cp /usr/bin/wineloader /usr/bin/wine in post install.
+    I am sure this is not the best or correct way to do this, but for expediency I did this.
+3) There are most likely errors in dependency handling as this is my first ebuild.
